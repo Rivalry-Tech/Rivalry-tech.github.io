@@ -1021,13 +1021,10 @@ body.stretched #header.full-header .container {
 	transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
 }
 
-#primary-menu ul li span { display: none; }
-
 #primary-menu ul li i {
 	position: relative;
 	font-size: 14px !important;
 	top: 1px;
-	line-height: 99px;
 	width: 14px;
 	text-align: center;
 	margin-right: 6px;
@@ -1902,7 +1899,9 @@ body.top-search-open #side-panel-trigger { opacity: 0; }
 
 #header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a { line-height: 60px; }
 
-#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a i { line-height: 59px; }
+#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a span { margin-top: 10px;}
+
+#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a i { line-height: 39px; }
 
 #header.sticky-header:not(.static-sticky) #primary-menu > ul > li > ul,
 #header.sticky-header:not(.static-sticky) #primary-menu > ul > li > .mega-menu-content,
