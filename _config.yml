@@ -12,3 +12,8 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+permalink: /:categories/:year/:month/:day/:title
+
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+highlighter: pygments
