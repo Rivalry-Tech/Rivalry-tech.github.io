@@ -2,62 +2,66 @@
 layout: default
 ---
 
-<div class="container clearfix">
+{% include slider.html %}
 
-  <div class="col_one_third nobottommargin center">
-    <a href="#"><img src="images/appshowcase/s1.png" alt="Image" class="bottommargin-sm"></a>
-    <h4>Responsive Layout</h4>
-    <p>Powerful Layout with Responsive functionality that can be adapted to any screen size. Resize browser to view.</p>
-  </div>
+<!-- Content
+============================================= -->
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
 
-  <div class="col_one_third nobottommargin center">
-    <a href="#"><img src="images/appshowcase/s4.png" alt="Image" class="bottommargin-sm"></a>
-    <h4>Retina Ready Graphics</h4>
-    <p>Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Retina Icons, Fonts &amp; all others graphics are optimized.</p>
-  </div>
+      <div class="col_one_third nobottommargin center">
+        <a href="#"><img src="images/appshowcase/s1.png" alt="Image" class="bottommargin-sm"></a>
+        <h4>Responsive Layout</h4>
+        <p>Powerful Layout with Responsive functionality that can be adapted to any screen size. Resize browser to view.</p>
+      </div>
 
-  <div class="col_one_third nobottommargin center col_last">
-    <a href="#"><img src="images/appshowcase/s5.png" alt="Image" class="bottommargin-sm"></a>
-    <h4>Powerful Performance</h4>
-    <p>Canvas includes tons of optimized code that are completely customizable and deliver unmatched fast performance.</p>
-  </div>
+      <div class="col_one_third nobottommargin center">
+        <a href="#"><img src="images/appshowcase/s4.png" alt="Image" class="bottommargin-sm"></a>
+        <h4>Retina Ready Graphics</h4>
+        <p>Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Retina Icons, Fonts &amp; all others graphics are optimized.</p>
+      </div>
 
-</div>
-
-
-
-<div class="container clearfix">
-
-  <div class="heading-block center">
-    <h3>Subscribe for more <span>Updates</span>.</h3>
-  </div>
-
-  <div id="widget-subscribe-form2-result" data-notify-type="success" data-notify-msg=""></div>
-  <form id="widget-subscribe-form2" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
-    <div class="input-group input-group-lg divcenter" style="max-width:600px;">
-      <span class="input-group-addon"><i class="icon-email2"></i></span>
-      <input type="email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="submit">Subscribe Now</button>
-      </span>
+      <div class="col_one_third nobottommargin center col_last">
+        <a href="#"><img src="images/appshowcase/s5.png" alt="Image" class="bottommargin-sm"></a>
+        <h4>Powerful Performance</h4>
+        <p>Canvas includes tons of optimized code that are completely customizable and deliver unmatched fast performance.</p>
+      </div>
     </div>
-  </form>
 
-  <script>
-  $("#widget-subscribe-form2").validate({
-    submitHandler: function(form) {
-      $(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-      $(form).ajaxSubmit({
-        target: '#widget-subscribe-form2-result',
-        success: function() {
-          $(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-          $('#widget-subscribe-form2').find('.form-control').val('');
-          $('#widget-subscribe-form2-result').attr('data-notify-msg', $('#widget-subscribe-form2-result').html()).html('');
-          SEMICOLON.widget.notifications($('#widget-subscribe-form2-result'));
+    <div class="container clearfix">
+
+      <div class="heading-block center">
+        <h3>Subscribe for more <span>Updates</span>.</h3>
+      </div>
+
+      <div id="widget-subscribe-form2-result" data-notify-type="success" data-notify-msg=""></div>
+      <form id="widget-subscribe-form2" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
+        <div class="input-group input-group-lg divcenter" style="max-width:600px;">
+          <span class="input-group-addon"><i class="icon-email2"></i></span>
+          <input type="email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">Subscribe Now</button>
+          </span>
+        </div>
+      </form>
+
+      <script>
+      $("#widget-subscribe-form2").validate({
+        submitHandler: function(form) {
+          $(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
+          $(form).ajaxSubmit({
+            target: '#widget-subscribe-form2-result',
+            success: function() {
+              $(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
+              $('#widget-subscribe-form2').find('.form-control').val('');
+              $('#widget-subscribe-form2-result').attr('data-notify-msg', $('#widget-subscribe-form2-result').html()).html('');
+              SEMICOLON.widget.notifications($('#widget-subscribe-form2-result'));
+            }
+          });
         }
       });
-    }
-  });
-  </script>
-
-</div>
+      </script>
+    </div>
+  </div>
+</section><!-- #content end -->

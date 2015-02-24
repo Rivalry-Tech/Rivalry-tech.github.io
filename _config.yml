@@ -8,10 +8,19 @@ url: "http://rivalryapp.com" # the base hostname & protocol for your site
 twitter_username: rivalryapp
 github_username:  rivalry-tech
 
+# Navigation
+navigation:
+ - title: Home
+   url: /
+ - title: About
+   url: /about
+ - title: Rules
+   url: /rules
+
 # Build settings
 markdown: kramdown
 
 permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+highlighter: rouge
