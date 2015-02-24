@@ -1,14 +1,12 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Rivalry!
+email: rivalryapp@gmail.com
+description: >
+  Rivalry! lets you show your true colors and represent your affiliation. Whether proving to your friends you're a bigger fan or rising up to the challenge of your rivals, Rivalry! makes it known where you stand.
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "http://rivalryapp.com" # the base hostname & protocol for your site
+twitter_username: rivalryapp
+github_username:  rivalry-tech
 
 # Build settings
 markdown: kramdown
