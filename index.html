@@ -35,33 +35,25 @@ layout: default
         <h3>Subscribe for <span>Updates</span>.</h3>
       </div>
 
-      <div id="widget-subscribe-form2-result" data-notify-type="success" data-notify-msg=""></div>
-      <form id="widget-subscribe-form2" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
-        <div class="input-group input-group-lg divcenter" style="max-width:600px;">
-          <span class="input-group-addon"><i class="icon-email2"></i></span>
-          <input type="email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="submit">Subscribe Now</button>
-          </span>
-        </div>
-      </form>
+      <!-- Begin MailChimp Signup Form -->
+      <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      </style>
+      <div id="mc_embed_signup">
+        <form action="//rivalryapp.us9.list-manage.com/subscribe/post?u=c61007f2eae8365d47752665f&amp;id=b8e32d1890" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll" class="input-group input-group-lg divcenter">
+          <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" placeholder="Enter your Email" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_c61007f2eae8365d47752665f_b8e32d1890" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-lg btn-default"></div>
+            </div>
+        </form>
+      </div>
 
-      <script>
-      $("#widget-subscribe-form2").validate({
-        submitHandler: function(form) {
-          $(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-          $(form).ajaxSubmit({
-            target: '#widget-subscribe-form2-result',
-            success: function() {
-              $(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-              $('#widget-subscribe-form2').find('.form-control').val('');
-              $('#widget-subscribe-form2-result').attr('data-notify-msg', $('#widget-subscribe-form2-result').html()).html('');
-              SEMICOLON.widget.notifications($('#widget-subscribe-form2-result'));
-            }
-          });
-        }
-      });
-      </script>
+
     </div>
   </div>
 </section><!-- #content end -->
